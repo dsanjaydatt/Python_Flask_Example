@@ -13,3 +13,14 @@ Requirements:
 Python3
 Python flask module
 mySQL Connector
+
+How to run:
+
+1.From Command Prompt:
+Open command Prompt. cd to the directory where all python files stored.
+To run the app:
+python app.py
+
+2. Vs-code
+To run via Vs-code, you might be needed some extension, then go to the python file and click on run or you can debug and run as well.
+
