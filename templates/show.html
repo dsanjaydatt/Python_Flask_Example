@@ -1,0 +1,25 @@
+<html>
+
+<body>
+    <table border="1">
+        <th>Id</th>
+        <th>Name</th>
+        <th>Roll</th>
+        <th>Update</th>
+
+        {% for row in rows %}
+        <tr>
+            <form action="/testupdate" method="POST">
+                <td>
+                    <input type="text" name="id" value="{{row[0]}}" class="field left" readonly />
+                </td>
+                <td><input type="text" name="name" value="{{row[1]}}" /></td>
+                <td><input type="text" name="roll" value="{{row[2]}}" /></td>
+                <td><input type="submit" value="Update" /></td>
+            </form>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>

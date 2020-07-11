@@ -1,0 +1,22 @@
+<html>
+
+<body>
+    <table border="1">
+        <thead>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Roll</th>
+        </thead>
+        {% for row in rows %}
+        <tr>
+            <td>{{row[0]}}</td>
+            <td>{{row[1]}}</td>
+            <td>{{row[2]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <p><a href="/">Back To Home Page</a></p>
+    <p><a href="/update">Update</a></p>
+</body>
+
+</html>
