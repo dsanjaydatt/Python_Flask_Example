@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def list():
-    conn = mysql.connect(user="root", password="1234", database="Emp")
+    conn = mysql.connect(user="abcd", password="1234", database="Emp")
     cur = conn.cursor()
     cur.execute("Select * from person")
     rows = cur.fetchall()
@@ -15,7 +15,7 @@ def list():
 
 @app.route("/testdelete", methods=["GET", "POST"])
 def testdelete():
-    conn = mysql.connect(user="root", password="1234", database="Emp")
+    conn = mysql.connect(user="abcd", password="1234", database="Emp")
     cur = conn.cursor()
     id = request.form["id"]
     print(id)

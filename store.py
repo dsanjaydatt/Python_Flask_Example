@@ -15,7 +15,7 @@ def act():
         try:
             name = request.form["name"]
             roll = request.form["roll"]
-            conn = mysql.connect(user="root", password="1234", database="Emp")
+            conn = mysql.connect(user="abcd", password="1234", database="Emp")
             cur = conn.cursor()
             sql = "INSERT INTO person(name,roll)values('{}','{}')".format(name, roll)
             cur.execute(sql)
