@@ -15,7 +15,7 @@ def act():
         try:
             name = request.form["name"]
             roll = request.form["roll"]
-            conn = mysql.connect(user="abcd", password="1234", database="Emp")
+            conn = mysql.connect(user="ghost", password="1234", database="Emp")
             cur = conn.cursor()
             sql = "INSERT INTO person(name,roll)values('{}','{}')".format(name, roll)
             cur.execute(sql)
@@ -27,7 +27,7 @@ def act():
 
 @app.route("/display")
 def display():
-    conn = mysql.connect(user="abcd", password="1234", database="Emp")
+    conn = mysql.connect(user="ghost", password="1234", database="Emp")
     cur = conn.cursor()
     cur.execute("Select * from person")
     rows = cur.fetchall()
@@ -36,7 +36,7 @@ def display():
 
 @app.route("/update")
 def list():
-    conn = mysql.connect(user="abcd", password="1234", database="Emp")
+    conn = mysql.connect(user="ghost", password="1234", database="Emp")
     cur = conn.cursor()
     cur.execute("Select * from person")
     rows = cur.fetchall()
@@ -45,7 +45,7 @@ def list():
 
 @app.route("/testupdate", methods=["GET", "POST"])
 def testupdate():
-    conn = mysql.connect(user="abcd", password="1234", database="Emp")
+    conn = mysql.connect(user="ghost", password="1234", database="Emp")
     cur = conn.cursor()
     name = request.form["name"]
     roll = request.form["roll"]
@@ -58,7 +58,7 @@ def testupdate():
 
 @app.route("/delete")
 def list1():
-    conn = mysql.connect(user="abcd", password="1234", database="Emp")
+    conn = mysql.connect(user="ghost", password="1234", database="Emp")
     cur = conn.cursor()
     cur.execute("Select* from person")
     rows = cur.fetchall()
@@ -67,7 +67,7 @@ def list1():
 
 @app.route("/testdelete", methods=["GET", "POST"])
 def testdelete():
-    conn = mysql.connect(user="abcd", password="1234", database="Emp")
+    conn = mysql.connect(user="ghost", password="1234", database="Emp")
     cur = conn.cursor()
     id = request.form["id"]
     print(id)
